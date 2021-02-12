@@ -1,0 +1,283 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  line-height: 1.3rem;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(#af67e9, #6565e7);
+  color: #fff;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.accordion {
+  padding: 5px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.accordion .itm {
+  margin: 10px 0 10px;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 8px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  color: #4a4b5e;
+}
+
+.accordion label::after {
+  content: url("/images/icon-arrow-down.svg");
+  font-weight: 700;
+  font-size: 22px;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.accordion input:checked + label::after {
+  content: url("/images/icon-arrow-down.svg");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion input:checked + label {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.accordion input + label + .content {
+  display: none;
+}
+
+.accordion input:checked + label + .content {
+  display: block;
+}
+
+.card {
+  width: 85%;
+  top: 147px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 50px 40px -20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 50px 40px -20px rgba(0, 0, 0, 0.4);
+}
+
+.card header {
+  margin-top: 150px;
+}
+
+.card header .card__title {
+  color: #1d1e35;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.card__img-top {
+  background: url("/images/illustration-woman-online-mobile.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 40px;
+  z-index: 2;
+}
+
+.card__img-bot {
+  background: url("/images/bg-pattern-mobile.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 100px;
+  z-index: 1;
+}
+
+hr {
+  background-color: #e7e7e9;
+  height: 1px;
+  border: 0;
+}
+
+.content p {
+  color: #4a4b5e;
+  font-weight: 400;
+  text-align: left;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  margin-bottom: 10px;
+  bottom: 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 90rem) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .accordion {
+    padding: 0 100px 50px 0;
+    margin-bottom: 0;
+  }
+  .accordion .itm {
+    margin: 10px 0 10px;
+  }
+  .accordion input {
+    display: none;
+  }
+  .accordion label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 8px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 400;
+    color: #4a4b5e;
+  }
+  .accordion label::after {
+    content: url("/images/icon-arrow-down.svg");
+    font-weight: 700;
+    font-size: 22px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+  .accordion input:checked + label::after {
+    content: url("/images/icon-arrow-down.svg");
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .accordion input:checked + label {
+    color: #1d1e35;
+    font-weight: 700;
+  }
+  .accordion input + label + .content {
+    display: none;
+  }
+  .accordion input:checked + label + .content {
+    display: block;
+  }
+  .card__img-top {
+    background: none;
+  }
+  .card__img-bot {
+    background: none;
+  }
+  .card {
+    background-size: 440px 390px, 900px 1000px;
+    background-image: url("/images/illustration-woman-online-desktop.svg"), url("/images/bg-pattern-desktop.svg");
+    background-position: -70px 60px, -528px -330px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    top: 23%;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 50px 40px -20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 50px 40px -20px rgba(0, 0, 0, 0.4);
+  }
+  .card::before {
+    content: url("/images/illustration-box-desktop.svg");
+    left: -92px;
+    top: 220px;
+    position: absolute;
+  }
+  .card header {
+    margin-top: 65px;
+  }
+  .card header .card__title {
+    color: #1d1e35;
+    font-weight: 700;
+    font-size: x-large;
+    text-align: left;
+  }
+  hr {
+    background-color: #e7e7e9;
+    height: 1px;
+    border: 0;
+  }
+  .content p {
+    color: #4a4b5e;
+    font-weight: 400;
+    text-align: left;
+  }
+  .attribution {
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0;
+  }
+  .attribution a {
+    color: #3e52a3;
+  }
+}
+/*# sourceMappingURL=main.css.map */

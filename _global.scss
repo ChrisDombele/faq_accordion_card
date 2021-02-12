@@ -1,0 +1,25 @@
+@import 'variables';
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  line-height: 1.3rem;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient($softViolet, $softBlue);
+  color: #fff;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
